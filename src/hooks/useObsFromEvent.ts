@@ -1,7 +1,7 @@
 import { Subject } from "rxjs";
 import { onUnmounted } from "vue";
 
-const useObsFromEvent = <T>(cb: (value: T) => void) => {
+export const useObsFromEvent = <T>(cb: (value: T) => void) => {
   const subject = new Subject<T>();
   const event = (value: T) => {
     subject.next(value);
@@ -13,5 +13,3 @@ const useObsFromEvent = <T>(cb: (value: T) => void) => {
   }
   return [event, obs];
 };
-
-export default useObsFromEvent;

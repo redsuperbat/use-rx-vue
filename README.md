@@ -4,16 +4,15 @@
 
 These are useful directives that you can include into your vue application.
 
-| Directive       | Description                                                                                                                                                                                 |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| v-click-outside | Specify a callback that will be triggered when user clicks outside element bound by directive                                                                                               |
-| v-expand        | Animate bound element when it enters the DOM. Only applicable if the element is also bound by v-if, v-show or v-else                                                                        |
-| v-hover         | Specify a callback that triggers when the user hovers over the element. True is passed to the callback when the user enters the element and false is passed when the user exits the element |
-| v-scoll         | Specify a callback that triggers when the element is visible on the page. The callback recives the element as it's argument when invoked                                                    |
+| Hook            | Description                                                                                                                                                                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| useObservable   | Subscribes a ref to given observable and unsubscribes on component unmount. Can accept an optional callback to trigger on each emitted value aswell as an inital state for the ref. |
+| useObsFromEvent | Exposes a callback and an observable that should be used to subscribe to dom events. Can accept an optional callback to trigger on each emitted value.                              |
+| useObsFromRef   | Converts a ref into an observable                                                                                                                                                   |
 
 ## Installation
 
-`npm i --save vue3-directives`
+`npm i --save use-rx-vue`
 
 To only use certain directives and reduce bundle size, register your directives show below.
 

@@ -1,7 +1,7 @@
 import { Observable } from "rxjs";
 import { onUnmounted, ref, UnwrapRef } from "vue";
 
-const useObservable = <T>(
+export const useObservable = <T>(
   obs: Observable<T>,
   cb?: (value: T) => void,
   initalState?: T
@@ -20,5 +20,3 @@ const useObservable = <T>(
   });
   return reference;
 };
-
-export default useObservable;

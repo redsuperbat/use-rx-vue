@@ -1,6 +1,6 @@
 import { computed, SetupContext } from "vue";
 
-const useModelValue = (
+export const useModelValue = (
   props: Record<string, any>,
   emit: SetupContext["emit"],
   modelValueName = "modelValue"
@@ -15,5 +15,3 @@ const useModelValue = (
   });
   return computedValue;
 };
-
-export default useModelValue;
