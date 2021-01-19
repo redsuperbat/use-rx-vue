@@ -1,8 +1,8 @@
-# Vue 3 Directives
+# UseRxVue
 
 ## Description
 
-These are useful directives that you can include into your vue application.
+These are useful hooks that you can include into your vue application. These require that vue and rxjs is installed.
 
 | Hook            | Description                                                                                                                                                                         |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
