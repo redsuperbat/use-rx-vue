@@ -1,10 +1,14 @@
 import { Observable } from "rxjs";
 import { onUnmounted, ref, UnwrapRef } from "vue";
 
+export interface UseObservableOptions<T> {
+  cb?: (value: T) => void;
+  initalState?: T;
+}
+
 export const useObservable = <T>(
   obs: Observable<T>,
-  cb?: (value: T) => void,
-  initalState?: T
+  { cb, initalState }: UseObservableOptions<T>
 ) => {
   const reference = ref(initalState);
 
