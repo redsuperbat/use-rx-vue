@@ -1,7 +1,7 @@
 import { Observable, Subject } from "rxjs";
 import { onUnmounted } from "vue";
 
-export const useObsFromEvent = <T>(
+export const useObsFromEvent = <T = Event>(
   cb?: (value: T) => void
 ): [(value: T) => void, Observable<T>] => {
   const subject = new Subject<T>();

@@ -8,7 +8,7 @@ export interface UseObservableOptions<T> {
 
 export const useObservable = <T>(
   obs: Observable<T>,
-  { cb, initalState }: UseObservableOptions<T>
+  { cb, initalState }: UseObservableOptions<T> = {}
 ) => {
   const reference = ref(initalState);
 
