@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
-    "prebuild:package": "npm run clean && npm run compile && node dist/setupPackage.js",
+    "prebuild:package": "npm test && npm run clean && npm run compile && node dist/setupPackage.js",
     "build:package": "cd dist && npm publish",
     "test": "jest"
   },
