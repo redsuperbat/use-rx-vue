@@ -13,8 +13,13 @@ export const useObservable = <T>(
   const reference = ref(initalState);
 
   const sub = obs.subscribe((emittedValue) => {
-    if (callback) {
+    if (callback && typeof callback === "function") {
       callback(emittedValue);
+    } else if (callback) {
+      console.warn(
+        "Seems like the callback provided is not a function but instead",
+        typeof callback
+      );
     }
     reference.value = emittedValue as UnwrapRef<T>;
   });
