@@ -18,7 +18,8 @@ export const useObservable = <T>(
     } else if (callback) {
       console.warn(
         "Seems like the callback provided is not a function but instead",
-        typeof callback
+        typeof callback,
+        callback
       );
     }
     reference.value = emittedValue as UnwrapRef<T>;
