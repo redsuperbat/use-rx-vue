@@ -17,7 +17,7 @@ export const useObservable = <T>(
       callback(emittedValue);
     } else if (callback) {
       console.warn(
-        "Seems like the callback provided is not a function but instead",
+        "Seems like the callback provided is not a function but instead a",
         typeof callback,
         callback
       );
