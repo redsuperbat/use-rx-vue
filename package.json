@@ -6,9 +6,7 @@
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "dist/lib",
-    "dist/esm",
-    "dist/umd",
+    "dist",
     "LICENSE"
   ],
   "scripts": {
@@ -28,8 +26,12 @@
   "bugs": {
     "url": "https://github.com/redsuperbat/use-rx-vue/issues"
   },
-  "keywords": [],
-  "author": "redsuperbat",
+  "keywords": [
+    "rxjs",
+    "vue",
+    "hooks"
+  ],
+  "author": "Max Netterberg",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.20",
